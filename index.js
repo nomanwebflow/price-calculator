@@ -31,7 +31,7 @@ const checkboxes = document.querySelectorAll('[pricing-element="checkbox"]');
 const totalValueDiv = document.querySelector('[pricing-element="total-value"]');
 
 // Initialize total value
-let totalValue = 0;
+let totalValue = 3500;
 
 // Event listener for checkbox changes
 checkboxes.forEach(checkbox => {
