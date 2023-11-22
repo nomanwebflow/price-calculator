@@ -24,26 +24,3 @@ bostform.addEventListener("change", function () {
 
 //
 
-// Assuming checkboxes are stored in an array named 'checkboxes'
-const checkboxes = document.querySelectorAll('[pricing-element="checkbox"]');
-
-// Reference to the div for displaying the total value
-const totalValueDiv = document.querySelector('[pricing-element="total-value"]');
-
-// Initialize total value
-let totalValue = 3500;
-
-// Event listener for checkbox changes
-checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-        totalValue = 0; // Reset total value
-        checkboxes.forEach(checkbox => {
-            if (checkbox.checked) {
-                const price = parseFloat(checkbox.getAttribute('price'));
-                totalValue += price; // Add the price to the total value if checkbox is checked
-            }
-        });
-        // Display only the numeric total value in the designated div
-        totalValueDiv.textContent = totalValue; // Display numeric total value
-    });
-});
